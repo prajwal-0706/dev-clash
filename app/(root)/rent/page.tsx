@@ -1,3 +1,4 @@
+
 "use client"
 import { useState } from "react"
 import Bar from './_components/Bar'
@@ -227,3 +228,4 @@ function page() {
 }
 
 export default page;
+
