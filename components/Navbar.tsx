@@ -86,6 +86,9 @@ function Navbar() {
               {items.map((item, index) => (
                 <DropdownMenuItem key={index}>{item.title}</DropdownMenuItem>
               ))}
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Login</DropdownMenuItem>
+              <DropdownMenuItem>Sign Up</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
