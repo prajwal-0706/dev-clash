@@ -9,7 +9,7 @@
       "area_sqm": 120,
       "status": "For Sale",
       "owner": "John Doe",
-      "image_url": "https://example.com/images/modern_apartment.jpg",
+      "image_url": "/images/property-1.jpg",
       "property_details": {
         "listed_on": "2024-02-10",
         "availability": "Immediate",
@@ -37,7 +37,7 @@
       "area_sqm": 400,
       "status": "For Sale",
       "owner": "Jane Smith",
-      "image_url": "https://example.com/images/luxury_villa.jpg",
+      "image_url": "/images/property-2.jpg",
       "property_details": {
         "listed_on": "2024-02-05",
         "availability": "Immediate",
@@ -65,7 +65,7 @@
       "area_sqm": 150,
       "status": "Sold",
       "owner": "Michael Johnson",
-      "image_url": "https://example.com/images/cozy_townhouse.jpg",
+      "image_url": "/images/property-3.jpg",
       "property_details": {
         "listed_on": "2024-01-20",
         "availability": "Sold",
@@ -93,7 +93,7 @@
       "area_sqm": 200,
       "status": "For Sale",
       "owner": "Sarah Brown",
-      "image_url": "https://example.com/images/family_home.jpg",
+      "image_url": "/images/property-4.jpg",
       "property_details": {
         "listed_on": "2024-02-08",
         "availability": "Immediate",
@@ -121,7 +121,7 @@
       "area_sqm": 100,
       "status": "For Sale",
       "owner": "Emily Wilson",
-      "image_url": "https://example.com/images/beachfront_condo.jpg",
+      "image_url": "/images/property-5.jpg",
       "property_details": {
         "listed_on": "2024-01-15",
         "availability": "Immediate",
@@ -149,7 +149,7 @@
       "area_sqm": 300,
       "status": "For Sale",
       "owner": "David Lee",
-      "image_url": "https://example.com/images/mountain_retreat.jpg",
+      "image_url": "/images/property-6.jpg",
       "property_details": {
         "listed_on": "2024-01-10",
         "availability": "Immediate",
@@ -177,7 +177,7 @@
       "area_sqm": 80,
       "status": "For Sale",
       "owner": "Mark Johnson",
-      "image_url": "https://example.com/images/rustic_cabin.jpg",
+      "image_url": "/images/property-7.jpg",
       "property_details": {
         "listed_on": "2024-01-05",
         "availability": "Immediate",
@@ -205,7 +205,7 @@
       "area_sqm": 90,
       "status": "For Sale",
       "owner": "Alice Green",
-      "image_url": "https://example.com/images/contemporary_loft.jpg",
+      "image_url": "/images/property-8.jpg",
       "property_details": {
         "listed_on": "2024-02-02",
         "availability": "Immediate",
@@ -233,7 +233,7 @@
       "area_sqm": 600,
       "status": "For Sale",
       "owner": "Robert Smith",
-      "image_url": "https://example.com/images/historic_mansion.jpg",
+      "image_url": "/images/property-9.jpg",
       "property_details": {
         "listed_on": "2024-01-25",
         "availability": "Immediate",
@@ -261,7 +261,7 @@
       "area_sqm": 150,
       "status": "For Sale",
       "owner": "Emma Wilson",
-      "image_url": "https://example.com/images/lakefront_cottage.jpg",
+      "image_url": "/images/property-10.jpg",
       "property_details": {
         "listed_on": "2024-02-01",
         "availability": "Immediate",
@@ -289,7 +289,7 @@
       "area_sqm": 100,
       "status": "For Sale",
       "owner": "Olivia Clark",
-      "image_url": "https://example.com/images/quaint_cottage.jpg",
+      "image_url": "/images/property-11.jpg",
       "property_details": {
         "listed_on": "2024-02-03",
         "availability": "Immediate",
@@ -317,7 +317,7 @@
       "area_sqm": 200,
       "status": "For Sale",
       "owner": "William Jones",
-      "image_url": "https://example.com/images/urban_penthouse.jpg",
+      "image_url": "/images/property-12.jpg",
       "property_details": {
         "listed_on": "2024-02-07",
         "availability": "Immediate",
@@ -345,7 +345,7 @@
       "area_sqm": 250,
       "status": "For Sale",
       "owner": "Elizabeth Wilson",
-      "image_url": "https://example.com/images/beach_house.jpg",
+      "image_url": "/images/property-13.jpg",
       "property_details": {
         "listed_on": "2024-01-28",
         "availability": "Immediate",
@@ -373,7 +373,7 @@
       "area_sqm": 300,
       "status": "For Sale",
       "owner": "Michael Brown",
-      "image_url": "https://example.com/images/mountain_chalet.jpg",
+      "image_url": "/images/property-14.jpg",
       "property_details": {
         "listed_on": "2024-01-22",
         "availability": "Immediate",
@@ -401,7 +401,7 @@
       "area_sqm": 280,
       "status": "For Sale",
       "owner": "Daniel Johnson",
-      "image_url": "https://example.com/images/historic_brownstone.jpg",
+      "image_url": "/images/property-15.jpg",
       "property_details": {
         "listed_on": "2024-02-06",
         "availability": "Immediate",
@@ -429,7 +429,7 @@
       "area_sqm": 150,
       "status": "For Sale",
       "owner": "Sophia Taylor",
-      "image_url": "https://example.com/images/suburban_bungalow.jpg",
+      "image_url": "/images/property-16.jpg",
       "property_details": {
         "listed_on": "2024-01-30",
         "availability": "Immediate",
@@ -457,7 +457,7 @@
       "area_sqm": 200,
       "status": "For Sale",
       "owner": "Oliver Miller",
-      "image_url": "https://example.com/images/riverside_retreat.jpg",
+      "image_url": "/images/property-17.jpg",
       "property_details": {
         "listed_on": "2024-01-27",
         "availability": "Immediate",
@@ -485,7 +485,7 @@
       "area_sqm": 600,
       "status": "For Sale",
       "owner": "Thomas Wilson",
-      "image_url": "https://example.com/images/gated_estate.jpg",
+      "image_url": "/images/property-18.jpg",
       "property_details": {
         "listed_on": "2024-01-24",
         "availability": "Immediate",
@@ -513,7 +513,7 @@
       "area_sqm": 60,
       "status": "For Sale",
       "owner": "Isabella Martinez",
-      "image_url": "https://example.com/images/studio_apartment.jpg",
+      "image_url": "/images/property-19.jpg",
       "property_details": {
         "listed_on": "2024-01-29",
         "availability": "Immediate",
@@ -541,7 +541,7 @@
       "area_sqm": 300,
       "status": "For Sale",
       "owner": "Gabriel Rodriguez",
-      "image_url": "https://example.com/images/farmhouse.jpg",
+      "image_url": "/images/property-20.jpg",
       "property_details": {
         "listed_on": "2024-01-26",
         "availability": "Immediate",
