@@ -9,7 +9,7 @@ export default defineSchema({
     beds: v.optional(v.number()),
     bathrooms: v.optional(v.number()),
     area_sqm: v.number(),
-    status: v.union(v.literal('available'), v.literal('sold')),
+    status: v.string(),
     owner: v.string(),
     image_url: v.string(),
     property_details: v.object({
