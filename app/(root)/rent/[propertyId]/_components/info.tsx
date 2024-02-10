@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { BedSingle, HelpCircle } from "lucide-react";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import owner from "@/public/images/owener.jpg";
-import { Button } from "@/components/ui/button";
-import logo from "@/public/logo.svg";
+import { BedSingle, HelpCircle } from 'lucide-react';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import owner from '@/public/images/owener.jpg';
+import { Button } from '@/components/ui/button';
+import logo from '@/public/logo.svg';
 type prop = {
   data: any;
 };
@@ -17,6 +17,7 @@ const Info = (props: prop) => {
   }, []);
 
   const info = props.data;
+  if (!info) return null;
   return (
     <div suppressHydrationWarning>
       <div className="w-[59%] flex rounded-lg border-slate-300 border-2 mt-10 mb-10">
@@ -24,42 +25,42 @@ const Info = (props: prop) => {
           <div className="text-slate-500 mb-3 text-sm">Bedrooms</div>
           <div className="flex">
             <BedSingle className="text-slate-500 mr-3" />
-            <div className="font-bold text-lg">{info.beds}</div>
+            <div className="font-bold text-lg">{info?.beds}</div>
           </div>
         </div>
         <div className="m-5">
           <div className="text-slate-500 mb-3 text-sm">Bathrooms</div>
           <div className="flex">
             <BedSingle className="text-slate-500 mr-3" />
-            <div className="font-bold text-lg">{info.bathrooms}</div>
+            <div className="font-bold text-lg">{info?.bathrooms}</div>
           </div>
         </div>
         <div className="m-5">
           <div className="text-slate-500 mb-3 text-sm">Square Area</div>
           <div className="flex">
             <BedSingle className="text-slate-500 mr-3" />
-            <div className="font-bold text-lg">{info.area_sqm}</div>
+            <div className="font-bold text-lg">{info?.area_sqm}</div>
           </div>
         </div>
         <div className="m-5">
           <div className="text-slate-500 mb-3 text-sm">Repair Quality</div>
           <div className="flex">
             <BedSingle className="text-slate-500 mr-3" />
-            <div className="font-bold text-lg">{info.repair_quality}</div>
+            <div className="font-bold text-lg">{info?.repair_quality}</div>
           </div>
         </div>
         <div className="m-5">
           <div className="text-slate-500 mb-3 text-sm">Status</div>
           <div className="flex">
             <BedSingle className="text-slate-500 mr-3" />
-            <div className="font-bold text-lg">{info.status}</div>
+            <div className="font-bold text-lg">{info?.status}</div>
           </div>
         </div>
       </div>
 
       <div className="w-[59%]">
         <h1 className="font-bold text-2xl mb-5">About this home</h1>
-        <div className=" font-normal">{info.about}</div>
+        <div className=" font-normal">{info?.about}</div>
       </div>
 
       <div className="rounded-lg border-2 border-slate-300 w-[59%] mt-8 bg-slate-200 ">
@@ -79,7 +80,7 @@ const Info = (props: prop) => {
               />
             </div>
             <div className="flex flex-col justify-center item-center">
-              <div className="font-bold text-sm">{info.owner}</div>
+              <div className="font-bold text-sm">{info?.owner}</div>
               <div className="text-slate-500 text-sm">
                 {info.property_details.city}
               </div>
@@ -110,7 +111,7 @@ const Info = (props: prop) => {
                 <div className="text-indigo-700 font-bold">Estatery</div>
               </div>
               <div className="font-bold  ">
-                {info.property_details.listed_on}
+                {info?.property_details.listed_on}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">

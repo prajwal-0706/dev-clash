@@ -5,7 +5,7 @@ import { Doc, Id } from './_generated/dataModel';
 export const getById = query({
   args: { documentId: v.id('properties') },
   handler: async (ctx, args) => {
-    // const identity = await ctx.auth.getUserIdentity();
+    const identity = await ctx.auth.getUserIdentity();
 
     const document = await ctx.db.get(args.documentId);
 
@@ -13,11 +13,11 @@ export const getById = query({
       throw new Error('Not Found');
     }
 
-    // if (!identity) {
-    //   throw new Error('Not Authenticated');
-    // }
+    if (!identity) {
+      throw new Error('Not Authenticated');
+    }
 
-    // const userId = identity?.subject;
+    const userId = identity?.subject;
 
     console.log(document);
 
@@ -33,21 +33,17 @@ export const update = mutation({
     repair_quality: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-    // const identity = await ctx.auth.getUserIdentity();
+    const identity = await ctx.auth.getUserIdentity();
 
-    // if (!identity) throw new Error('Not Authenticated');
+    if (!identity) throw new Error('Not Authenticated');
 
-    // const userId = identity.subject;
+    const userId = identity.subject;
 
     const { id, ...rest } = args;
 
     const existingDocument = await ctx.db.get(args.id);
 
     if (!existingDocument) throw new Error('Not Found');
-
-    // if (existingDocument.userId !== userId) {
-    //   throw new Error('User not Authorized');
-    // }
 
     const document = ctx.db.patch(args.id, { ...rest });
 

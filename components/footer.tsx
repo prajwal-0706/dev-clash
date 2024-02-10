@@ -4,7 +4,8 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer>
-      <div className="flex flex-col md:flex-row items-center gap-x-5 justify-around">
+      <hr className="mt-3" />
+      <div className="mt-8 flex flex-col md:flex-row items-center py-5 gap-x-5 justify-around">
         <div className="flex items-center mb-3 sm:mb-0 text-left">
           <Image
             src="/logo.svg"
