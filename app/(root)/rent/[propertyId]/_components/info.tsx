@@ -7,15 +7,23 @@ import owner from '@/public/images/owener.jpg';
 import { Button } from '@/components/ui/button';
 import logo from '@/public/logo.svg';
 import { DialogDemo } from './dialogDemo';
+import { useMutation } from 'convex/react';
+import { api } from '@/convex/_generated/api';
 type prop = {
   data: any;
 };
 const Info = (props: prop) => {
   const [isClient, setIsClient] = useState(false);
+  const updateDoc = useMutation(api.documents.updateStatus);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  const handleAppoint = () => {
+    const promise = updateDoc({ id: props.data._id }).then(() => alert('done'));
+    console.log(promise);
+  };
 
   const info = props.data;
   if (!info) return null;
@@ -88,8 +96,12 @@ const Info = (props: prop) => {
             </div>
           </div>
           <div className="flex justify-center items-center gap-3">
-            <Button className=" bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white">
-              Ask a question
+            <Button
+              disabled={info.status === 'sold'}
+              onClick={handleAppoint}
+              className="bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white"
+            >
+              {info.status === 'sold' ? 'Sold' : 'Book an appointment'}
             </Button>
             {/* <Button className=" bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white mr-2">
               <HelpCircle className="h-[20px] mr-2" />

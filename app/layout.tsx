@@ -7,6 +7,7 @@ import { Inter, Urbanist } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
+import { EdgeStoreProvider } from '@/lib/edgestore';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -34,16 +35,18 @@ export default function RootLayout({
 }>) {
   return (
     <ConvexClientProvider>
-      <html lang="en">
-        <body className={inter.className}>
-          <Toaster />
-          <header>
-            <Navbar />
-          </header>
-          <main>{children}</main>
-          <Footer />
-        </body>
-      </html>
+      <EdgeStoreProvider>
+        <html lang="en">
+          <body className={inter.className}>
+            <Toaster />
+            <header>
+              <Navbar />
+            </header>
+            <main>{children}</main>
+            <Footer />
+          </body>
+        </html>
+      </EdgeStoreProvider>
     </ConvexClientProvider>
   );
 }
