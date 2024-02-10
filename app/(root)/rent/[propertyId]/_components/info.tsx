@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import owner from '@/public/images/owener.jpg';
 import { Button } from '@/components/ui/button';
 import logo from '@/public/logo.svg';
+import { DialogDemo } from './dialogDemo';
 type prop = {
   data: any;
 };
@@ -90,10 +91,12 @@ const Info = (props: prop) => {
             <Button className=" bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white">
               Ask a question
             </Button>
-            <Button className=" bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white mr-2">
+            {/* <Button className=" bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white mr-2">
               <HelpCircle className="h-[20px] mr-2" />
               Get more info
-            </Button>
+            </Button> */}
+
+            <DialogDemo />
           </div>
         </div>
       </div>
