@@ -198,20 +198,20 @@ function SearchBarWithDropdown() {
           placeholder="Search..."
           value={searchTerm}
           onChange={ handleSearchChange}
-          className="border border-gray-300 px-4 py-2 rounded-l-md mr-2"
+          className="border border-gray-300 px-5 py-2 mx-2 rounded-l-md h-10"
         />
         <div className="flex-1">
           <select
             value={dropdownValue}
             onChange={handleDropdownChange}
-            className="border border-gray-300 px-4 py-2 rounded-r-md bg-white"
+            className="border border-gray-300 px-5 py-2 mx-2 rounded-r-md bg-white h-10"
           >
             <option value="Property">Property</option>
             <option value="Location">Location</option>
-            {/* Add more options as needed */}
+           
           </select>
         </div>
-        <button type="submit" className="border border-gray-300 px-4 py-2 rounded-md bg-gray-200">Search</button>
+        <button type="submit" className="border border-gray-300 px-4 py-2 rounded-md mx-2 bg-indigo-600 h-10 text-white">Search</button>
       </form>
     </div>
   );
@@ -221,7 +221,7 @@ function page() {
   return (
     <div>
       <SearchBarWithDropdown />
-      <Bar properties={props}/>
+      {/* <Bar properties={props}/> */}
       <Cards properties={props}/>
     </div>
   )
