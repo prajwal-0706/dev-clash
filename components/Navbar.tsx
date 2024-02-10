@@ -1,51 +1,57 @@
-"use client";
-import Image from "next/image";
-import React from "react";
+'use client';
+import Image from 'next/image';
+import React from 'react';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from '@/components/ui/navigation-menu';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from '@/components/ui/dropdown-menu';
 
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
-import { Urbanist } from "next/font/google";
-import { Menu } from "lucide-react";
+import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
+import { Urbanist } from 'next/font/google';
+import { ArrowRight, Menu } from 'lucide-react';
+import { useConvexAuth } from 'convex/react';
+import { SignInButton, UserButton } from '@clerk/clerk-react';
+import Link from 'next/link';
+import { Spinner } from './Spinner';
 
-const urbanist = Urbanist({ subsets: ["latin"] });
+const urbanist = Urbanist({ subsets: ['latin'] });
 
 const items = [
   {
-    title: "Sell",
-    href: "/sell",
+    title: 'Sell',
+    href: '/sell',
   },
   {
-    title: "Rent",
-    href: "/rent",
+    title: 'Rent',
+    href: '/rent',
   },
   {
-    title: "Buy",
-    href: "/buy",
+    title: 'Buy',
+    href: '/rent',
   },
   {
-    title: "Manage Property",
-    href: "/manage-property",
+    title: 'Manage Property',
+    href: '/manage-property',
   },
 ];
 
 function Navbar() {
+  const { isAuthenticated, isLoading } = useConvexAuth();
+
   return (
     <div className="h-[120px]">
       <div className="flex w-full py-5 px-5 sm:px-10 space-between justify-between fixed bg-slate-50 z-50 ">
-        <div className="flex items-center justify-center">
+        <Link href="/" className="flex items-center justify-center">
           <Image
             width={40}
             height={40}
@@ -54,11 +60,11 @@ function Navbar() {
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           />
           <span
-            className={cn("text-2xl font-semibold px-4", urbanist.className)}
+            className={cn('text-2xl font-semibold px-4', urbanist.className)}
           >
             Estatery
           </span>
-        </div>
+        </Link>
         <div className=" items-center justify-center space-x-4 hidden md:flex ">
           <NavigationMenu className="font-medium">
             <NavigationMenuList>
@@ -73,8 +79,29 @@ function Navbar() {
           </NavigationMenu>
         </div>
         <div className="hidden md:flex items-center justify-center space-x-4">
-          <Button variant="secondary">Login</Button>
-          <Button className="bg-indigo-700">Sign Up</Button>
+          {isLoading && <Spinner />}
+          {!isAuthenticated && !isLoading && (
+            <>
+              <SignInButton mode="modal">
+                <Button variant="secondary">Login</Button>
+              </SignInButton>
+              <SignInButton mode="modal">
+                <Button className="bg-indigo-700">Sign Up</Button>
+              </SignInButton>
+            </>
+          )}
+
+          {isAuthenticated && !isLoading && (
+            <>
+              <Button size="sm" variant="ghost" asChild>
+                <Link href="/rent">
+                  Enter Estatery
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
+              </Button>
+              <UserButton afterSignOutUrl="/" />
+            </>
+          )}
         </div>
         <div className="md:hidden mt-1">
           <DropdownMenu>
