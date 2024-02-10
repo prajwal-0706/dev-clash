@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BackLink from "./_components/link";
 import property1 from "@/public/images/property-1.jpg";
 import Heading from "./_components/heading";
@@ -11,6 +11,12 @@ const PropertyPagebyId = ({
 }: {
   params: { propertyId: string };
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const data: any = {
     property_id: 1,
     property_name: "Modern Apartment with Stunning View",
@@ -41,7 +47,7 @@ const PropertyPagebyId = ({
     repair_quality: "Excellent",
   };
   return (
-    <div className="w-[80%] m-auto">
+    <div suppressHydrationWarning className="w-[80%] m-auto">
       <BackLink />
       <Heading data={data} />
       <Info data={data} />

@@ -1,18 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Heart, Search, Share2 } from "lucide-react";
+import { Heart, Share2 } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 type prop = {
   data: any;
 };
 
 const Heading = (props: prop) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const data = props.data;
   console.log(data);
 
   return (
-    <div>
+    <div suppressHydrationWarning>
       <div className="flex items-center justify-between ml-1">
         <h1 className="text-3xl font-bold">{data.property_name}</h1>
         <div className=" flex justify-between w-1/5">
