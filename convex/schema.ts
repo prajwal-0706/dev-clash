@@ -2,16 +2,33 @@ import { defineSchema, defineTable } from 'convex/server';
 import { v } from 'convex/values';
 
 export default defineSchema({
-  documents: defineTable({
-    title: v.string(),
-    userId: v.string(),
-    isArchived: v.boolean(),
-    parentDocument: v.optional(v.id('documents')),
-    content: v.optional(v.string()),
-    coverImage: v.optional(v.string()),
-    icon: v.optional(v.string()),
-    isPublished: v.boolean(),
+  properties: defineTable({
+    property_name: v.string(), // take the values from constants/data.json and desgin the schema
+    location: v.string(),
+    price: v.number(),
+    beds: v.optional(v.number()),
+    bathrooms: v.optional(v.number()),
+    area_sqm: v.number(),
+    status: v.string(),
+    owner: v.string(),
+    image_url: v.string(),
+    property_details: v.object({
+      listed_on: v.string(),
+      availability: v.string(),
+      type: v.string(),
+      laundry_availability: v.optional(v.boolean()),
+      cooling: v.optional(v.string()),
+      heating: v.optional(v.string()),
+      city: v.string(),
+      year_built: v.number(),
+      lot_size_sqm: v.number(),
+      parking_area: v.string(),
+      deposit: v.number(),
+      processing_fees: v.number(),
+    }),
+    about: v.string(),
+    repair_quality: v.string(),
   })
-    .index('by_user', ['userId'])
-    .index('by_user_parent', ['userId', 'parentDocument']),
+    .index('by_name', ['property_name'])
+    .index('by_user_status', ['property_name', 'status']),
 });

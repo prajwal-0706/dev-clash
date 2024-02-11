@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button";
+'use client';
+
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,14 +8,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Hero from "./_components/hero";
-import { BadgeCheck, Car } from "lucide-react";
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Hero from './_components/hero';
+import { BadgeCheck, Car } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Hero />
@@ -51,7 +55,12 @@ export default function Home() {
                       Sharing you verified properties with all the details you
                       need to make a decision.
                     </CardDescription>
-                    <Button className="mt-4">Find a property</Button>
+                    <Button
+                      onClick={() => router.push('/rent')}
+                      className="mt-4"
+                    >
+                      Find a property
+                    </Button>
                   </CardHeader>
                 </Card>
               </TabsContent>
