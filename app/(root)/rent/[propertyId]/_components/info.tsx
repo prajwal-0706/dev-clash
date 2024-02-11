@@ -1,14 +1,18 @@
-'use client';
+"use client";
 
-import { BedSingle, HelpCircle } from 'lucide-react';
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import owner from '@/public/images/owener.jpg';
-import { Button } from '@/components/ui/button';
-import logo from '@/public/logo.svg';
-import { DialogDemo } from './dialogDemo';
-import { useMutation } from 'convex/react';
-import { api } from '@/convex/_generated/api';
+import Comments from "./comments";
+import AddComment from "./addComment";
+
+import { BedSingle, HelpCircle } from "lucide-react";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import owner from "@/public/images/owener.jpg";
+import { Button } from "@/components/ui/button";
+import logo from "@/public/logo.svg";
+import { DialogDemo } from "./dialogDemo";
+import { useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
+
 type prop = {
   data: any;
 };
@@ -20,8 +24,43 @@ const Info = (props: prop) => {
     setIsClient(true);
   }, []);
 
+  const Data2 = [
+    {
+      id: 1,
+      rayte: 4.0,
+      name: "Sarah M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+    {
+      id: 2,
+      rayte: 4.0,
+      name: "Dujal M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+    {
+      id: 3,
+      rayte: 4.0,
+      name: "Om M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+    {
+      id: 4,
+      rayte: 4.0,
+      name: "Dhruv M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+  ];
+
   const handleAppoint = () => {
-    const promise = updateDoc({ id: props.data._id }).then(() => alert('done'));
+    const promise = updateDoc({ id: props.data._id }).then(() => alert("done"));
     console.log(promise);
   };
 
@@ -97,11 +136,11 @@ const Info = (props: prop) => {
           </div>
           <div className="flex justify-center items-center gap-3">
             <Button
-              disabled={info.status === 'sold'}
+              disabled={info.status === "sold"}
               onClick={handleAppoint}
               className="bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white"
             >
-              {info.status === 'sold' ? 'Sold' : 'Book an appointment'}
+              {info.status === "sold" ? "Sold" : "Book an appointment"}
             </Button>
             {/* <Button className=" bg-indigo-200 text-indigo-700  hover:bg-indigo-700 hover:text-white mr-2">
               <HelpCircle className="h-[20px] mr-2" />
@@ -200,6 +239,15 @@ const Info = (props: prop) => {
         </div>
       </div>
       <hr className="mt-6 w-[59%] mb-6 text-slate-600" />
+
+      <div className="flex justify-center items-center w-[59%] flex-wrap gap-4 mb-4">
+        {Data2.map((data) => (
+          <Comments data={data} key={data.id} />
+        ))}
+      </div>
+      <div className="w-[59%] ml-[45%] mb-16">
+        <AddComment />
+      </div>
     </div>
   );
 };

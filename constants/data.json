@@ -484,59 +484,5 @@
     },
     "about": "This gated estate offers unparalleled privacy and luxury. It features a tennis court, swimming pool, and manicured grounds.",
     "repair_quality": "Excellent"
-  },
-  {
-    "property_name": "Downtown Studio Apartment",
-    "location": "101 Broadway, Downtown, USA",
-    "price": 200000,
-    "beds": 1,
-    "bathrooms": 1,
-    "area_sqm": 60,
-    "status": "available",
-    "owner": "Isabella Martinez",
-    "image_url": "/images/property-19.jpg",
-    "property_details": {
-      "listed_on": "2024-01-29",
-      "availability": "Immediate",
-      "type": "Studio",
-      "laundry_availability": true,
-      "cooling": "Window Unit",
-      "heating": "Wall Unit",
-      "city": "Downtown",
-      "year_built": 2010,
-      "lot_size_sqm": 0,
-      "parking_area": "Street",
-      "deposit": 10000,
-      "processing_fees": 500
-    },
-    "about": "This downtown studio apartment offers convenient city living with easy access to shops, restaurants, and public transportation.",
-    "repair_quality": "Good"
-  },
-  {
-    "property_name": "Countryside Farmhouse with Acres",
-    "location": "789 Farm Rd, Countryside, USA",
-    "price": 1000000,
-    "beds": 4,
-    "bathrooms": 3,
-    "area_sqm": 300,
-    "status": "available",
-    "owner": "Gabriel Rodriguez",
-    "image_url": "/images/property-20.jpg",
-    "property_details": {
-      "listed_on": "2024-01-26",
-      "availability": "Immediate",
-      "type": "Farmhouse",
-      "laundry_availability": true,
-      "cooling": "Central Air",
-      "heating": "Radiant",
-      "city": "Countryside",
-      "year_built": 1995,
-      "lot_size_sqm": 10000,
-      "parking_area": "Driveway",
-      "deposit": 20000,
-      "processing_fees": 1000
-    },
-    "about": "This countryside farmhouse offers peaceful living with acres of land for farming or recreational activities. It features a wrap-around porch and scenic views.",
-    "repair_quality": "Excellent"
   }
 ]
