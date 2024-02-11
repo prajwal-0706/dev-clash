@@ -7,6 +7,8 @@ import owner from "@/public/images/owener.jpg";
 import { Button } from "@/components/ui/button";
 import logo from "@/public/logo.svg";
 import { DialogDemo } from "./dialogDemo";
+import Comments from "./comments";
+import AddComment from "./addComment";
 type prop = {
   data: any;
 };
@@ -16,7 +18,40 @@ const Info = (props: prop) => {
   useEffect(() => {
     setIsClient(true);
   }, []);
-
+  const Data2 = [
+    {
+      id: 1,
+      rayte: 4.0,
+      name: "Sarah M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+    {
+      id: 2,
+      rayte: 4.0,
+      name: "Dujal M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+    {
+      id: 3,
+      rayte: 4.0,
+      name: "Om M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+    {
+      id: 4,
+      rayte: 4.0,
+      name: "Dhruv M.",
+      discription:
+        "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      date: "August 17,2023",
+    },
+  ];
   const info = props.data;
   return (
     <div suppressHydrationWarning>
@@ -181,6 +216,15 @@ const Info = (props: prop) => {
         </div>
       </div>
       <hr className="mt-6 w-[59%] mb-6 text-slate-600" />
+
+      <div className="flex justify-center items-center w-[59%] flex-wrap gap-4 mb-4">
+        {Data2.map((data) => (
+          <Comments data={data} key={data.id} />
+        ))}
+      </div>
+      <div className="w-[59%] ml-[45%] mb-16">
+        <AddComment />
+      </div>
     </div>
   );
 };
