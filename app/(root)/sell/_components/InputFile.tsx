@@ -11,7 +11,7 @@ export default function InputFile(props: any) {
   console.log(file);
   return (
     <div className="w-full mt-4">
-      <Label className="mx-6">7/12 Property Papers:</Label>
+      <Label className="mx-6">{props.title}:</Label>
 
       <div className="flex flex-wrap items-center justify-center w-10/12 mx-auto my-4">
         <label
@@ -90,8 +90,8 @@ export default function InputFile(props: any) {
                 },
               });
 
-              props.setUrl(res.url);
               console.log(res);
+              props.setUrl(res.url);
             }
           }}
         >

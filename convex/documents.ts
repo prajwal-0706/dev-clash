@@ -75,3 +75,28 @@ export const updateStatus = mutation({
     return document;
   },
 });
+
+export const createEntry = mutation({
+  args: {
+    property_name: v.string(),
+    location: v.string(),
+    price: v.number(),
+    image_url: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+
+    if (!identity) {
+      throw new Error('Not Authenticated');
+    }
+
+    const userId = identity.subject;
+
+    const document = await ctx.db.insert('properties', {
+      ...args,
+      status: 'available',
+    });
+
+    return document;
+  },
+});
