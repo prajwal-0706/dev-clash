@@ -130,7 +130,7 @@ const Info = (props: prop) => {
             <div className="flex flex-col justify-center item-center">
               <div className="font-bold text-sm">{info?.owner}</div>
               <div className="text-slate-500 text-sm">
-                {info.property_details.city}
+                {info.property_details?.city}
               </div>
             </div>
           </div>
@@ -165,32 +165,36 @@ const Info = (props: prop) => {
                 <div className="text-indigo-700 font-bold">Estatery</div>
               </div>
               <div className="font-bold  ">
-                {info?.property_details.listed_on}
+                {info?.property_details?.listed_on}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex ">Date Available</div>
               <div className="font-bold  ">
-                {info.property_details.availability}
+                {info.property_details?.availability}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex ">Type</div>
-              <div className="font-bold  ">{info.property_details.type}</div>
+              <div className="font-bold  ">{info?.property_details?.type}</div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex ">Laundry</div>
               <div className="font-bold  ">
-                {info.property_details.laundry_availability}
+                {info?.property_details?.laundry_availability}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex ">Cooling</div>
-              <div className="font-bold  ">{info.property_details.cooling}</div>
+              <div className="font-bold  ">
+                {info?.property_details?.cooling}
+              </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex ">Heating</div>
-              <div className="font-bold  ">{info.property_details.heating}</div>
+              <div className="font-bold  ">
+                {info?.property_details?.heating}
+              </div>
             </div>
           </div>
 
@@ -199,34 +203,36 @@ const Info = (props: prop) => {
           <div className="w-[100%]">
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex">City</div>
-              <div className="font-bold ">{info.property_details.city}</div>
+              <div className="font-bold ">{info?.property_details?.city}</div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex">Year Build</div>
               <div className="font-bold ">
-                {info.property_details.year_built}
+                {info?.property_details?.year_built}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex">Size</div>
               <div className="font-bold ">
-                {info.property_details.lot_size_sqm}
+                {info?.property_details?.lot_size_sqm}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex">Parking Area</div>
               <div className="font-bold ">
-                {info.property_details.parking_area}
+                {info?.property_details?.parking_area}
               </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex">Deposit</div>
-              <div className="font-bold ">{info.property_details.deposit}</div>
+              <div className="font-bold ">
+                {info?.property_details?.deposit}
+              </div>
             </div>
             <div className="flex justify-between w-[100%] mt-4 mb-4">
               <div className="flex">Proccessing Fee</div>
               <div className="font-bold ">
-                {info.property_details.processing_fees}
+                {info?.property_details?.processing_fees}
               </div>
             </div>
           </div>

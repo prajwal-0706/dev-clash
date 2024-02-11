@@ -6,7 +6,11 @@ function InputParam(props: any) {
   return (
     <div className="my-4">
       <Label htmlFor={props.labelId}>{props.title}</Label>
-      <Input name={props.name} placeholder={props.holder} />
+      <Input
+        onChange={props.onChange}
+        name={props.name}
+        placeholder={props.holder}
+      />
     </div>
   );
 }
