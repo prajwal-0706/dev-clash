@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,13 +8,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Hero from './_components/hero';
-import { BadgeCheck, Car } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Hero from "./_components/hero";
+import { BadgeCheck, Car } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Stats from "./_components/Stats";
 
 export default function Home() {
   const router = useRouter();
@@ -56,7 +57,7 @@ export default function Home() {
                       need to make a decision.
                     </CardDescription>
                     <Button
-                      onClick={() => router.push('/rent')}
+                      onClick={() => router.push("/rent")}
                       className="mt-4"
                     >
                       Find a property
@@ -82,6 +83,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Stats />
+
       <div className="w-full bg-indigo-700 text-white">
         <div className="w-10/12 mx-auto py-10 text-center">
           <div className="text-indigo-400 text-2xl font-semibold">
