@@ -9,11 +9,11 @@ import BuyForm from "./BuyForm";
 function Hero() {
   return (
     <div className="flex w-11/12 mx-auto ">
-      <div className=" w-7/12 px-10 p-16 ">
+      <div className=" lg:w-7/12 lg:px-10 lg:p-16 pb-16">
         <span className="text-7xl font-semibold w-8/12  ">
           Buy, Rent, or Sell your property easily!
         </span>
-        <div className="text-xl font-medium  w-8/12 mt-8">
+        <div className="text-sm font-normal lg:w-8/12 mt-8">
           A great platform to buy, sell or even rent your properties without any
           commissions.
         </div>
@@ -40,7 +40,7 @@ function Hero() {
           </Tabs>
         </div>
       </div>
-      <div>
+      <div className="hidden sm:block">
         <Image
           className="rounded-md m-4 float-right"
           src="/images/property-1.jpg"
